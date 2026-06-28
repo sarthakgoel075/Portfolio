@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarthak Goel — AI Engineer & Developer</title>
+  <meta name="description" content="Portfolio of Sarthak Goel — AI Engineer, Full-Stack Developer, and B.Tech Computer Engineering student at Thapar Institute." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Particle canvas background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Animated gradient blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">SG</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting reveal"><span class="wave">👋</span> Hello, I'm</p>
+      <h1 class="hero-name reveal" data-delay="0.1">Sarthak <span class="gradient-text">Goel</span></h1>
+      <h2 class="hero-role reveal" data-delay="0.2">
+        <span id="typed"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-tagline reveal" data-delay="0.3">
+        AI Engineer crafting intelligent systems with LLMs, RAG pipelines, and full-stack precision.
+      </p>
+      <div class="hero-cta reveal" data-delay="0.4">
+        <a href="#projects" class="btn btn-primary magnetic">
+          <span>View My Work</span><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic">
+          <i class="fa-solid fa-paper-plane"></i><span>Get In Touch</span>
+        </a>
+      </div>
+      <div class="hero-socials reveal" data-delay="0.5">
+        <a href="https://github.com/sarthakgoel075" target="_blank" rel="noopener" class="social-link magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sarthak-goel-935326264/" target="_blank" rel="noopener" class="social-link magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/sarthakgoel84/" target="_blank" rel="noopener" class="social-link magnetic" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:sarthakgoel20112004@gmail.com" class="social-link magnetic" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="mouse"><span class="wheel"></span></span>
+      <span class="scroll-text">Scroll</span>
+    </a>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" data-delay="0.1">
+          <p class="lead">
+            I'm a <strong>Computer Engineering</strong> undergrad at <strong>Thapar Institute</strong> with a <strong>9.02 CGPA</strong>, passionate about building production-grade AI systems.
+          </p>
+          <p>
+            From developing an internal <strong>LLM evaluation system</strong> at Pibit.ai to engineering a <strong>multilingual GenAI voice assistant</strong> at LG Electronics, I love turning research into real, working products. I work across the stack — RAG architectures, prompt engineering, FastAPI backends, and React frontends.
+          </p>
+          <p>
+            When I'm not shipping features, I'm solving <strong>600+ DSA problems</strong> on LeetCode, GFG, and Codeforces to keep my fundamentals razor-sharp.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="600" data-suffix="+">0</span>
+              <span class="stat-label">DSA Problems Solved</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="3" data-suffix="">0</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="9.02" data-suffix="" data-decimals="2">0</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="3.4" data-suffix="L+" data-decimals="1">0</span>
+              <span class="stat-label">Scholarship Won</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card reveal" data-delay="0.2">
+          <div class="education-block">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="edu-item">
+              <div class="edu-head">
+                <span class="edu-degree">B.Tech, Computer Engineering</span>
+                <span class="edu-year">2022 — 2026</span>
+              </div>
+              <span class="edu-school">Thapar Institute of Engineering & Technology</span>
+              <span class="edu-meta">Patiala, Punjab · CGPA: 9.02</span>
+            </div>
+            <div class="edu-item">
+              <div class="edu-head">
+                <span class="edu-degree">Class XII (CBSE)</span>
+                <span class="edu-year">2020 — 2022</span>
+              </div>
+              <span class="edu-school">Silver Bells Public School</span>
+              <span class="edu-meta">Shamli, Uttar Pradesh · 95.0%</span>
+            </div>
+          </div>
+          <div class="location-block">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Shamli, Uttar Pradesh, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-delay="0.05">
+          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">SQL</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="0.1">
+          <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Frameworks & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">ReactJS</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Selenium</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="0.15">
+          <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Data & AI</h3>
+          <div class="skill-tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LLM Evaluation</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="0.2">
+          <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+          <h3>Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">Postman</span>
+            <span class="tag">PowerBI</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="0.25">
+          <div class="skill-icon"><i class="fa-solid fa-book"></i></div>
+          <h3>Core Subjects</h3>
+          <div class="skill-tags">
+            <span class="tag">DSA</span>
+            <span class="tag">OOPs</span>
+            <span class="tag">DBMS</span>
+            <span class="tag">OS</span>
+            <span class="tag">CN</span>
+            <span class="tag">AI</span>
+          </div>
+        </div>
+        <div class="skill-card skill-card-cta reveal" data-delay="0.3">
+          <div class="skill-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Always Learning</h3>
+          <p>Exploring agentic AI, MCP servers, and evaluation frameworks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jan 2026 — Present</span>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <h3 class="timeline-role">AI Intern</h3>
+            <h4 class="timeline-company"><i class="fa-solid fa-building"></i> Pibit.ai · HSR Layout, Bangalore</h4>
+            <ul class="timeline-list">
+              <li>Built an internal <strong>LLM evaluation system (PyEval)</strong> to compare expected vs generated outputs, improving evaluation accuracy by <strong>25%</strong>.</li>
+              <li>Developed an <strong>MCP server</strong> enabling conversational querying of evaluation data, reducing manual analysis by <strong>40%</strong>.</li>
+              <li>Designed prompt experiments across multiple PRs, improving response quality and reducing incorrect outputs by <strong>20%</strong>.</li>
+              <li>Implemented <strong>OCR evaluation metrics</strong> (IoU-based bounding box analysis) for detailed error classification.</li>
+              <li>Used SQL queries to analyze trends and generate automated reports for stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jun — Jul 2025</span>
+            </div>
+            <h3 class="timeline-role">Intern — GenAI</h3>
+            <h4 class="timeline-company"><i class="fa-solid fa-building"></i> LG Electronics India · Noida Sector 16</h4>
+            <ul class="timeline-list">
+              <li><strong>GenAI Voice Assistant:</strong> Built a multilingual pipeline using FastWhisper, Mistral, MBART, and IndicParler-TTS with low latency.</li>
+              <li>Integrated <strong>FAISS + SQLite (RAG)</strong> to improve response relevance, increasing retrieval accuracy by <strong>30%</strong>.</li>
+              <li><strong>Sentiment Analysis:</strong> Scraped 10K+ reviews and trained a TensorFlow model achieving <strong>90%+ accuracy</strong>.</li>
+              <li>Visualized insights using PowerBI dashboards and automated pipelines via Linux cron jobs.</li>
+            </ul>
+            <div class="timeline-links">
+              <a href="https://github.com/sarthakgoel075/Multilingual-Voice-Assistant" target="_blank" rel="noopener" class="mini-link"><i class="fa-brands fa-github"></i> Voice Assistant</a>
+              <a href="https://github.com/sarthakgoel075/Customer-Sentiment-Analysis" target="_blank" rel="noopener" class="mini-link"><i class="fa-brands fa-github"></i> Sentiment Analysis</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Nov 2024 — Jul 2025</span>
+            </div>
+            <h3 class="timeline-role">GenAI Chatbot Developer</h3>
+            <h4 class="timeline-company"><i class="fa-solid fa-building"></i> Samsung PRISM R&D · Remote / Hybrid</h4>
+            <p class="timeline-sub">GenAI Chatbot for Network FCA PSC Correlation</p>
+            <ul class="timeline-list">
+              <li>Built a <strong>ReactJS frontend</strong> for a GenAI-powered network troubleshooting chatbot.</li>
+              <li>Integrated <strong>RAG architecture</strong> with LLaMA and Mistral models for context-aware responses.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card tilt reveal" data-delay="0.1">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <i class="fa-solid fa-user-graduate project-icon"></i>
+            <span class="project-date">Mar — May 2025</span>
+          </div>
+          <h3 class="project-title">Student Management System</h3>
+          <p class="project-desc">A full-stack app with RESTful APIs and optimized database performance for academic data management.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-feature"><i class="fa-solid fa-check"></i> RESTful APIs</span>
+            <span class="project-feature"><i class="fa-solid fa-check"></i> Query Optimization</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal" data-delay="0.2">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <i class="fa-solid fa-baseball-bat-ball project-icon"></i>
+            <span class="project-date">Oct — Dec 2024</span>
+          </div>
+          <h3 class="project-title">Cricket Management System</h3>
+          <p class="project-desc">A database-driven system for managing cricket tournaments, players, and automated statistics & leaderboards.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-feature"><i class="fa-solid fa-check"></i> Tournament Tracking</span>
+            <span class="project-feature"><i class="fa-solid fa-check"></i> Auto Leaderboards</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal" data-delay="0.3">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <i class="fa-solid fa-microphone-lines project-icon"></i>
+            <span class="project-date">2025</span>
+          </div>
+          <h3 class="project-title">Multilingual Voice Assistant</h3>
+          <p class="project-desc">A low-latency multilingual GenAI pipeline with Whisper, Mistral, MBART & TTS, backed by FAISS+SQLite RAG.</p>
+          <div class="project-tags">
+            <span class="tag">FastWhisper</span>
+            <span class="tag">Mistral</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">RAG</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/sarthakgoel075/Multilingual-Voice-Assistant" target="_blank" rel="noopener" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal" data-delay="0.4">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <i class="fa-solid fa-chart-line project-icon"></i>
+            <span class="project-date">2025</span>
+          </div>
+          <h3 class="project-title">Customer Sentiment Analysis</h3>
+          <p class="project-desc">Scraped 10K+ reviews and trained a TensorFlow model with 90%+ accuracy, visualized via PowerBI dashboards.</p>
+          <div class="project-tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">PowerBI</span>
+            <span class="tag">Selenium</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/sarthakgoel075/Customer-Sentiment-Analysis" target="_blank" rel="noopener" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Achieve<span class="gradient-text">ments</span></h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal" data-delay="0.1">
+          <div class="achievement-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>600+ DSA Problems</h3>
+          <p>Solved across LeetCode, GeeksforGeeks, and Codeforces — keeping fundamentals sharp.</p>
+        </div>
+        <div class="achievement-card reveal" data-delay="0.2">
+          <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h3>₹3.4L+ Scholarships</h3>
+          <p>Awarded for academic excellence and JEE performance.</p>
+        </div>
+        <div class="achievement-card reveal" data-delay="0.3">
+          <div class="achievement-icon"><i class="fa-solid fa-star"></i></div>
+          <h3>9.02 CGPA</h3>
+          <p>Consistently among the top performers at Thapar Institute.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-wrap reveal" data-delay="0.1">
+        <p class="contact-lead">Have a project, role, or just want to talk AI? My inbox is always open.</p>
+        <div class="contact-cards">
+          <a href="mailto:sarthakgoel20112004@gmail.com" class="contact-card magnetic">
+            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">sarthakgoel20112004@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+917455858603" class="contact-card magnetic">
+            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Phone</span>
+              <span class="contact-card-value">+91 74558 58603</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/sarthak-goel-935326264/" target="_blank" rel="noopener" class="contact-card magnetic">
+            <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">Sarthak Goel</span>
+            </div>
+          </a>
+          <a href="https://github.com/sarthakgoel075" target="_blank" rel="noopener" class="contact-card magnetic">
+            <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">GitHub</span>
+              <span class="contact-card-value">@sarthakgoel075</span>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:sarthakgoel20112004@gmail.com" class="btn btn-primary btn-lg magnetic">
+          <span>Let's Work Together</span><i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">SG</span>
+      <p class="footer-text">Designed & built by <strong>Sarthak Goel</strong> · © <span id="year"></span></p>
+      <div class="footer-socials">
+        <a href="https://github.com/sarthakgoel075" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sarthak-goel-935326264/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/sarthakgoel84/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
